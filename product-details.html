@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product-name</title>
+    <link rel="stylesheet" href="css/product.css" />
+    <!-- css style sheet -->
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <!-- font awesome link -->
+    <script
+      src="https://kit.fontawesome.com/e58d4fb0ce.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <!-- various links for bootstrap -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- google fonts link -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <section class="title-navbar">
+      <!-- navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Tidy Up</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Categories
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="products.html"
+                      >All products</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="#">Girls </a></li>
+                  <li><a class="dropdown-item" href="#">Boys </a></li>
+                  <li><a class="dropdown-item" href="#">Accessories</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="nav-search d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search by School"
+                aria-label="Search"
+              />
+              <button class="btn btn-search btn-outline-light" type="submit">
+                Search
+              </button>
+            </form>
+            <!-- if logged in -->
+            <div class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="user-details.html"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                data-bs-toggle="dropdown"
+              >
+                Hello, user
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="user-details.html">Profile </a>
+                </li>
+                <hr />
+                <li>
+                  <a class="dropdown-item" href="orders.html">Your orders</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="all-address.html"
+                    >Saved Addresses
+                  </a>
+                </li>
+                <hr />
+                <li>
+                  <a class="dropdown-item" href="user-details.html"
+                    >Edit details
+                  </a>
+                </li>
+                <li><a class="dropdown-item" href="#">Contact Us </a></li>
+                <li><a class="dropdown-item" href="#">Logout </a></li>
+              </ul>
+            </div>
+            <a class="btn btn-info" href="login.html">Logout</a>
+            <a class="btn btn-nav btn-outline-light" href="{% url 'cart' %}">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+            <!-- if not logged in -->
+            <!-- <div class="btn-accounts">
+              <a class="btn btn-nav btn-info" href="login.html">Login</a>
+              <a class="btn btn-nav btn-outline-info" href="sign-up.html"
+                >Sign up</a
+              >
+              <a class="btn btn-nav btn-outline-light" href="{% url 'cart' %}">
+                <i class="fas fa-shopping-cart"></i>
+              </a>
+            </div> -->
+          </div>
+        </div>
+      </nav>
+    </section>
+    <!--Section: Block Content-->
+    <section class="mb-5">
+      <div class="row main-content card-main">
+        <div class="card product-img col-md-6 mb-4 mb-md-0">
+          <!-- <div id="mdb-lightbox-ui"></div> -->
+
+          <div class="mdb-lightbox">
+            <div class="col-12 mb-0">
+              <figure class="view overlay rounded z-depth-1 main-img">
+                <a
+                  href="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12a.jpg"
+                  data-size="710x823"
+                >
+                  <img
+                    src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12a.jpg"
+                    class="img-fluid z-depth-1 picZoomer"
+                  />
+                </a>
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="card product-details col-md-4">
+          <h5>Shirt</h5>
+          <p class="mb-2 text-muted text-uppercase small">
+            Ryan International School
+          </p>
+          <div class="row">
+            <h6 class="mb-2 text-muted small col-sm-6">Average rating : 3.5</h6>
+            <div class="rate col-sm-6">
+              <input type="radio" id="star5" name="rate" value="5" />
+              <label for="star5" title="text"></label>
+              <input type="radio" id="star4" name="rate" value="4" />
+              <label for="star4" title="text"></label>
+              <input type="radio" id="star3" name="rate" value="3" />
+              <label for="star3" title="text"></label>
+              <input type="radio" id="star2" name="rate" value="2" />
+              <label for="star2" title="text"></label>
+              <input type="radio" id="star1" name="rate" value="1" />
+              <label for="star1" title="text"></label>
+            </div>
+            <!-- rating end -->
+          </div>
+          <!-- rating -->
+
+          <p>
+            <span class="mr-1"><strong>$12.99</strong></span>
+          </p>
+          <p class="pt-1"></p>
+          <div class="table-responsive">
+            <table class="table table-sm table-borderless mb-0">
+              <tbody>
+                <tr>
+                  <th class="pl-0 w-25" scope="row"><strong>School</strong></th>
+                  <td>Ryan International School</td>
+                </tr>
+                <tr>
+                  <th class="pl-0 w-25" scope="row"><strong>Item</strong></th>
+                  <td>Shirt</td>
+                </tr>
+                <tr>
+                  <th class="pl-0 w-25" scope="row">
+                    <strong>Delivery</strong>
+                  </th>
+                  <td>India</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <hr />
+          <div class="table-responsive mb-2">
+            <table class="table table-sm table-borderless">
+              <tbody>
+                <tr>
+                  <td class="pl-0 pb-0 w-25">Quantity</td>
+                  <td class="pb-0">Select size</td>
+                </tr>
+                <tr>
+                  <td class="pl-0">
+                    <div class="def-number-input number-input safari_only mb-0">
+                      <button
+                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                        class="minus"
+                      ></button>
+                      <input
+                        class="quantity"
+                        min="0"
+                        name="quantity"
+                        value="1"
+                        type="number"
+                      />
+                      <button
+                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                        class="plus"
+                      ></button>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="mt-1">
+                      <div class="form-check form-check-inline pl-0">
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          id="small"
+                          name="materialExampleRadios"
+                          checked
+                        />
+                        <label
+                          class="form-check-label small text-uppercase card-link-secondary"
+                          for="small"
+                          >Small</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline pl-0">
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          id="medium"
+                          name="materialExampleRadios"
+                        />
+                        <label
+                          class="form-check-label small text-uppercase card-link-secondary"
+                          for="medium"
+                          >Medium</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline pl-0">
+                        <input
+                          type="radio"
+                          class="form-check-input"
+                          id="large"
+                          name="materialExampleRadios"
+                        />
+                        <label
+                          class="form-check-label small text-uppercase card-link-secondary"
+                          for="large"
+                          >Large</label
+                        >
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <a type="button" class="btn btn-info btn-md mr-1 mb-2"> Buy now </a>
+          <a type="button" class="btn btn-light btn-md mr-1 mb-2">
+            <i class="fas fa-shopping-cart pr-2"></i>Add to cart
+          </a>
+        </div>
+      </div>
+    </section>
+    <!--Section: Block Content-->
+    <!-- Reviews -->
+    <section class="colored-section" id="reviews">
+      <div class="container-fluid">
+        <div class="loading">
+          <span>Reviews</span>
+        </div>
+        <div
+          id="carousel-Testimonials"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <h2 class="testimonial-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                ipsa, dolor tenetur dolores dolore rerum nostrum possimus quasi
+                asperiores inventore!
+              </h2>
+              <img
+                class="testimonial-img"
+                src="images/women-profile.png"
+                alt="dog-profile"
+              />
+              <em>user1, Gurgaon</em>
+            </div>
+
+            <div class="carousel-item c">
+              <h2 class="testimonial-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+                nobis rem accusantium. Voluptates, officiis soluta.
+              </h2>
+              <img
+                class="testimonial-img"
+                src="images/man-profile.png"
+                alt="lady-profile"
+              />
+              <em>user2, Noida</em>
+            </div>
+
+            <div class="carousel-item">
+              <h2 class="testimonial-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Explicabo distinctio eligendi, illo perferendis maxime
+                voluptatem aspernatur!
+              </h2>
+              <img
+                class="testimonial-img"
+                src="images/women-profile.png"
+                alt="dog-profile"
+              />
+              <em>user3, Delhi</em>
+            </div>
+
+            <a
+              class="carousel-control-prev"
+              href="#carousel-Testimonials"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#carousel-Testimonials"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+            </a>
+          </div>
+        </div>
+        <div class="review-box">
+          <label class="label">Review product :</label>
+          <form class="review-input">
+            <textarea id="review" name="review" rows="4" cols="50">
+How are you liking Tidy Up? </textarea
+            >
+            <br /><br />
+            <input
+              class="submit-btn btn btn-dark"
+              type="submit"
+              value="Submit"
+            />
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+
+    <footer class="block-area footer-section container-fluid">
+      <div class="main-content">
+        <div class="left box">
+          <h2>About Us</h2>
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+              necessitatibus! Provident, placeat et nesciunt nobis dolorum
+              tempora laudantium repudiandae necessitatibus beatae, suscipit
+              optio doloribus obcaecati doloremque, iure laboriosam amet
+              voluptatibus?
+            </p>
+            <div class="social">
+              <a class="icon-footer" href="#"
+                ><span class="fab fa-facebook-f"></span
+              ></a>
+              <a class="icon-footer" href="#"
+                ><span class="fab fa-twitter"></span
+              ></a>
+              <a class="icon-footer" href="#"
+                ><span class="fab fa-instagram"></span
+              ></a>
+              <a class="icon-footer" href="#"
+                ><span class="fab fa-linkedin"></span
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="center box">
+          <h2>Address</h2>
+          <div class="content">
+            <div class="place">
+              <span class="fas fa-map-marker-alt"></span>
+              <span class="text"
+                >9301 Roberts Street Duvernay-Est, QC H7A 2M7</span
+              >
+            </div>
+
+            <div class="phone">
+              <span class="fas fa-phone"></span>
+              <span class="text">425-785-5798</span>
+            </div>
+
+            <div class="email">
+              <span class="fas fa-envelope"></span>
+              <span class="text">XYZABC@email.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+  ></script>
+
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    $(document).ready(function () {
+      // MDB Lightbox Init
+      $(function () {
+        $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
+      });
+    });
+  </script>
+</html>

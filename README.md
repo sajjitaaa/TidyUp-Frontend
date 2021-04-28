@@ -1,1 +1,1 @@
-# TidyUp-Frontend
+# Minor-project
